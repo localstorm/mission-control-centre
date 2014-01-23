@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+
+  <persistence-unit name="gtdmcc-unit">
+    <jta-data-source>java:MCC_DB</jta-data-source>
+    <!--jta-data-source>jdbc/MCC_DB</jta-data-source-->
+    <!--non-jta-data-source>java:MCC_DB_UNMANAGED</non-jta-data-source-->
+    <properties>
+      <property name="dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+      <property name="hibernate.show_sql" value="true" />
+      <property name="hibernate.format_sql" value="true" />
+      <property name="hibernate.connection.useUnicode" value="true" />
+      <property name="hibernate.connection.characterEncoding" value="UTF-8" />
+    </properties>
+  </persistence-unit>
+</persistence>

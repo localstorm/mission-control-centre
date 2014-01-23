@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="ee-lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ee-lib/javaee.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ee-lib/j2ee.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

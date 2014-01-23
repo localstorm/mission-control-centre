@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+        <display-name>GTD Personal Task Manager</display-name>
+
+        <listener>
+            <listener-class>org.localstorm.mcc.web.starter.XmppServletContextListener</listener-class>
+        </listener>
+
+        <filter>
+                <filter-name>StripesFilter</filter-name>
+                <filter-class>net.sourceforge.stripes.controller.StripesFilter</filter-class>
+                <init-param>
+                    <param-name>ActionResolver.UrlFilters</param-name>
+                    <param-value>WEB-INF/classes</param-value>
+                </init-param>
+                <init-param>
+                    <param-name>ActionResolver.PackageFilters</param-name>
+                    <param-value>org.localstorm.mcc.web.actions,
+                                 org.localstorm.mcc.web.dashboard.actions,
+                                 org.localstorm.mcc.web.gtd.actions,
+                                 org.localstorm.mcc.web.cashflow.actions,
+                                 org.localstorm.mcc.web.people.actions</param-value>
+                </init-param>
+                <init-param>
+                    <param-name>LocalePicker.Locales</param-name>
+                    <param-value>en_US:UTF-8</param-value>
+                </init-param>
+        </filter>
+
+        <filter>
+                <display-name>403 Filter</display-name>
+                <filter-name>RestrictionFilter</filter-name>
+                <filter-class>org.localstorm.mcc.web.filter.RestrictionFilter</filter-class>
+        </filter>
+
+        <filter>
+                <display-name>Auth Filter</display-name>
+                <filter-name>AuthFilter</filter-name>
+                <filter-class>org.localstorm.mcc.web.filter.AuthFilter</filter-class>
+        </filter>
+
+        <filter>
+                <display-name>Tx Filter</display-name>
+                <filter-name>TxFilter</filter-name>
+                <filter-class>org.localstorm.mcc.web.filter.TxFilter</filter-class>
+        </filter>
+
+        <filter>
+                <display-name>NoCache Filter</display-name>
+                <filter-name>NoCacheFilter</filter-name>
+                <filter-class>org.localstorm.mcc.web.filter.NoCacheFilter</filter-class>
+        </filter>
+
+        <filter>
+                <display-name>ForceCache Filter</display-name>
+                <filter-name>ForceCacheFilter</filter-name>
+                <filter-class>org.localstorm.mcc.web.filter.ForceCacheFilter</filter-class>
+        </filter>
+
+        <filter>
+                <display-name>Lazy Load Filter</display-name>
+                <filter-name>LazyLoadFilter</filter-name>
+                <filter-class>org.localstorm.mcc.web.gtd.filter.LazyLoadFilter</filter-class>
+        </filter>
+
+        <filter>
+                <display-name>Cashflow Lazy Load Filter</display-name>
+                <filter-name>CfLazyLoadFilter</filter-name>
+                <filter-class>org.localstorm.mcc.web.cashflow.filter.LazyLoadFilter</filter-class>
+        </filter>
+
+        <filter>
+                <display-name>People's Lazy Load Filter</display-name>
+                <filter-name>PplLazyLoadFilter</filter-name>
+                <filter-class>org.localstorm.mcc.web.people.filter.LazyLoadFilter</filter-class>
+        </filter>
+
+        <filter>
+            <filter-name>CompressingFilter</filter-name>
+            <filter-class>org.localstorm.mcc.web.filter.compressing.CompressingFilter</filter-class>
+            <init-param>
+                <param-name>debug</param-name>
+                <param-value>true</param-value>
+            </init-param>
+        </filter>
+
+        <filter>
+            <filter-name>RequestLogFilter</filter-name>
+            <filter-class>org.localstorm.mcc.web.filter.RequestLogFilter</filter-class>
+        </filter>
+
+        <filter>
+            <filter-name>GtdContextSecurityCheckFilter</filter-name>
+            <filter-class>org.localstorm.mcc.web.gtd.filter.security.GtdContextSecurityCheckFilter</filter-class>
+        </filter>
+
+        <filter>
+            <filter-name>GtdInboxSecurityCheckFilter</filter-name>
+            <filter-class>org.localstorm.mcc.web.gtd.filter.security.GtdInboxSecurityCheckFilter</filter-class>
+        </filter>
+
+        <filter>
+            <filter-name>GtdListSecurityCheckFilter</filter-name>
+            <filter-class>org.localstorm.mcc.web.gtd.filter.security.GtdListSecurityCheckFilter</filter-class>
+        </filter>
+
+        <filter>
+            <filter-name>GtdTaskSecurityCheckFilter</filter-name>
+            <filter-class>org.localstorm.mcc.web.gtd.filter.security.GtdTaskSecurityCheckFilter</filter-class>
+        </filter>
+
+        <filter>
+            <filter-name>GtdObjectSecurityCheckFilter</filter-name>
+            <filter-class>org.localstorm.mcc.web.gtd.filter.security.GtdObjectSecurityCheckFilter</filter-class>
+        </filter>
+
+        <filter>
+            <filter-name>GtdFileSecurityCheckFilter</filter-name>
+            <filter-class>org.localstorm.mcc.web.gtd.filter.security.GtdFileSecurityCheckFilter</filter-class>
+        </filter>
+
+        <filter>
+            <filter-name>GtdNoteSecurityCheckFilter</filter-name>
+            <filter-class>org.localstorm.mcc.web.gtd.filter.security.GtdNoteSecurityCheckFilter</filter-class>
+        </filter>
+
+        <filter>
+            <filter-name>CashflowAssetSecurityCheckFilter</filter-name>
+            <filter-class>org.localstorm.mcc.web.cashflow.filter.security.CashflowAssetSecurityCheckFilter</filter-class>
+        </filter>
+
+        <filter>
+            <filter-name>CashflowOperationSecurityCheckFilter</filter-name>
+            <filter-class>org.localstorm.mcc.web.cashflow.filter.security.CashflowOperationSecurityCheckFilter</filter-class>
+        </filter>
+
+        <filter>
+            <filter-name>CashflowTargetSecurityCheckFilter</filter-name>
+            <filter-class>org.localstorm.mcc.web.cashflow.filter.security.CashflowTargetSecurityCheckFilter</filter-class>
+        </filter>
+
+        <filter>
+            <filter-name>PeopleGroupSecurityCheckFilter</filter-name>
+            <filter-class>org.localstorm.mcc.web.people.filter.security.PeopleGroupSecurityCheckFilter</filter-class>
+        </filter>
+
+        <filter>
+            <filter-name>PeoplePersonSecurityCheckFilter</filter-name>
+            <filter-class>org.localstorm.mcc.web.people.filter.security.PeoplePersonSecurityCheckFilter</filter-class>
+        </filter>
+
+        <filter>
+            <filter-name>PeopleAttributeSecurityCheckFilter</filter-name>
+            <filter-class>org.localstorm.mcc.web.people.filter.security.PeopleAttributeSecurityCheckFilter</filter-class>
+        </filter>
+
+        <filter>
+            <filter-name>PeopleMailListSecurityCheckFilter</filter-name>
+            <filter-class>org.localstorm.mcc.web.people.filter.security.PeopleMailListSecurityCheckFilter</filter-class>
+        </filter>
+
+        <filter>
+            <filter-name>PeopleMailListSpecialSecurityCheckFilter</filter-name>
+            <filter-class>org.localstorm.mcc.web.people.filter.security.PeopleMailListSpecialSecurityCheckFilter</filter-class>
+        </filter>
+
+        <!-- =========== Filter Mapping ============ -->
+        <!-- Stripes -->
+        <filter-mapping>
+                <filter-name>StripesFilter</filter-name>
+                <url-pattern>/actions/*</url-pattern>
+        </filter-mapping>
+
+        <!-- Logging -->
+        <filter-mapping>
+                <filter-name>RequestLogFilter</filter-name>
+                <url-pattern>/*</url-pattern>
+                <dispatcher>REQUEST</dispatcher>
+        </filter-mapping>
+
+        <!-- Transactions -->
+
+        <filter-mapping>
+                <filter-name>TxFilter</filter-name>
+                <url-pattern>/actions/*</url-pattern>
+                <dispatcher>REQUEST</dispatcher>
+        </filter-mapping>
+
+        <filter-mapping>
+                <filter-name>TxFilter</filter-name>
+                <url-pattern>/chart/*</url-pattern>
+                <dispatcher>REQUEST</dispatcher>
+        </filter-mapping>
+
+        <!-- Basic Security -->
+        <filter-mapping>
+                <filter-name>RestrictionFilter</filter-name>
+                <url-pattern>*.jsp</url-pattern>
+                <dispatcher>REQUEST</dispatcher>
+        </filter-mapping>
+
+        <filter-mapping>
+                <filter-name>AuthFilter</filter-name>
+                <url-pattern>/actions/*</url-pattern>
+                <dispatcher>REQUEST</dispatcher>
+        </filter-mapping>
+
+        <filter-mapping>
+                <filter-name>AuthFilter</filter-name>
+                <url-pattern>/chart/*</url-pattern>
+                <dispatcher>REQUEST</dispatcher>
+        </filter-mapping>
+
+        <!-- Caching -->
+
+        <filter-mapping>
+                <filter-name>NoCacheFilter</filter-name>
+                <url-pattern>/chart/*</url-pattern>
+                <dispatcher>REQUEST</dispatcher>
+        </filter-mapping>
+
+        <filter-mapping>
+                <filter-name>ForceCacheFilter</filter-name>
+                <url-pattern>/images/*</url-pattern>
+                <dispatcher>REQUEST</dispatcher>
+        </filter-mapping>
+
+        <filter-mapping>
+                <filter-name>ForceCacheFilter</filter-name>
+                <url-pattern>/lang/*</url-pattern>
+                <dispatcher>REQUEST</dispatcher>
+        </filter-mapping>
+
+        <filter-mapping>
+                <filter-name>ForceCacheFilter</filter-name>
+                <url-pattern>/js/*</url-pattern>
+                <dispatcher>REQUEST</dispatcher>
+        </filter-mapping>
+
+        <filter-mapping>
+                <filter-name>ForceCacheFilter</filter-name>
+                <url-pattern>/css/*</url-pattern>
+                <dispatcher>REQUEST</dispatcher>
+        </filter-mapping>
+
+        <!-- Lazy initiallization -->
+
+        <filter-mapping>
+                <filter-name>LazyLoadFilter</filter-name>
+                <url-pattern>/actions/gtd/*</url-pattern>
+                <dispatcher>REQUEST</dispatcher>
+        </filter-mapping>
+
+        <filter-mapping>
+                <filter-name>CfLazyLoadFilter</filter-name>
+                <url-pattern>/actions/cash/*</url-pattern>
+                <dispatcher>REQUEST</dispatcher>
+        </filter-mapping>
+
+        <filter-mapping>
+                <filter-name>PplLazyLoadFilter</filter-name>
+                <url-pattern>/actions/ppl/*</url-pattern>
+                <dispatcher>REQUEST</dispatcher>
+        </filter-mapping>
+
+        <!-- Advanced Security -->
+
+        <filter-mapping>
+                <filter-name>GtdContextSecurityCheckFilter</filter-name>
+                <url-pattern>/actions/gtd/ctx/*</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+                <filter-name>GtdInboxSecurityCheckFilter</filter-name>
+                <url-pattern>/actions/gtd/ibx/*</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+                <filter-name>GtdListSecurityCheckFilter</filter-name>
+                <url-pattern>/actions/gtd/ctx/list/*</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+                <filter-name>GtdObjectSecurityCheckFilter</filter-name>
+                <url-pattern>/actions/gtd/ctx/obj/*</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+                <filter-name>GtdTaskSecurityCheckFilter</filter-name>
+                <url-pattern>/actions/gtd/ctx/list/task/*</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+                <filter-name>GtdFileSecurityCheckFilter</filter-name>
+                <url-pattern>/actions/gtd/ctx/obj/file/*</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+                <filter-name>GtdNoteSecurityCheckFilter</filter-name>
+                <url-pattern>/actions/gtd/ctx/obj/note/*</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+            <filter-name>CashflowAssetSecurityCheckFilter</filter-name>
+            <url-pattern>/actions/cash/asset/*</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+            <filter-name>CashflowOperationSecurityCheckFilter</filter-name>
+            <url-pattern>/actions/cash/op/*</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+            <filter-name>CashflowTargetSecurityCheckFilter</filter-name>
+            <url-pattern>/actions/cash/target/*</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+            <filter-name>PeopleGroupSecurityCheckFilter</filter-name>
+            <url-pattern>/actions/ppl/group/*</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+            <filter-name>PeoplePersonSecurityCheckFilter</filter-name>
+            <url-pattern>/actions/ppl/group/person/*</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+            <filter-name>PeopleAttributeSecurityCheckFilter</filter-name>
+            <url-pattern>/actions/ppl/group/person/attr/*</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+            <filter-name>PeopleAttributeSecurityCheckFilter</filter-name>
+            <url-pattern>/actions/ppl/ml/person/attr/*</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+            <filter-name>PeopleMailListSecurityCheckFilter</filter-name>
+            <url-pattern>/actions/ppl/ml/*</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+            <filter-name>PeoplePersonSecurityCheckFilter</filter-name>
+            <url-pattern>/actions/ppl/ml/person/*</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+            <filter-name>PeopleMailListSpecialSecurityCheckFilter</filter-name>
+            <url-pattern>/actions/ppl/ml/special/*</url-pattern>
+        </filter-mapping>
+
+        <!-- Compression -->
+
+        <filter-mapping>
+            <filter-name>CompressingFilter</filter-name>
+            <url-pattern>/actions/*</url-pattern>
+        </filter-mapping>
+
+        <!-- ============== Servlets ============== -->
+
+        <servlet>
+                <servlet-name>StripesDispatcher</servlet-name>
+                <servlet-class>net.sourceforge.stripes.controller.DispatcherServlet</servlet-class>
+                <load-on-startup>1</load-on-startup>
+        </servlet>
+
+        <servlet>
+                <servlet-name>TaskContextsStructureChartServlet</servlet-name>
+                <servlet-class>org.localstorm.mcc.web.gtd.servlets.TaskContextsStructureChartServlet</servlet-class>
+                <load-on-startup>2</load-on-startup>
+        </servlet>
+
+        <servlet>
+                <servlet-name>TasksStructureChartServlet</servlet-name>
+                <servlet-class>org.localstorm.mcc.web.gtd.servlets.TasksStructureChartServlet</servlet-class>
+                <load-on-startup>2</load-on-startup>
+        </servlet>
+
+        <servlet>
+                <servlet-name>AssetsStructureChartServlet</servlet-name>
+                <servlet-class>org.localstorm.mcc.web.cashflow.servlets.AssetsStructureChartServlet</servlet-class>
+                <load-on-startup>2</load-on-startup>
+        </servlet>
+
+        <servlet>
+                <servlet-name>NetWorthHistoryChartServlet</servlet-name>
+                <servlet-class>org.localstorm.mcc.web.cashflow.servlets.NetWorthHistoryChartServlet</servlet-class>
+                <load-on-startup>2</load-on-startup>
+        </servlet>
+
+        <servlet>
+                <servlet-name>RoiHistoryChartServlet</servlet-name>
+                <servlet-class>org.localstorm.mcc.web.cashflow.servlets.RoiHistoryChartServlet</servlet-class>
+                <load-on-startup>2</load-on-startup>
+        </servlet>
+
+        <servlet>
+                <servlet-name>DebtHistoryChartServlet</servlet-name>
+                <servlet-class>org.localstorm.mcc.web.cashflow.servlets.DebtHistoryChartServlet</servlet-class>
+                <load-on-startup>2</load-on-startup>
+        </servlet>
+
+        <servlet>
+                <servlet-name>AssetCostChartServlet</servlet-name>
+                <servlet-class>org.localstorm.mcc.web.cashflow.servlets.AssetCostChartServlet</servlet-class>
+                <load-on-startup>2</load-on-startup>
+        </servlet>
+
+        <servlet>
+                <servlet-name>AuthServlet</servlet-name>
+                <servlet-class>org.localstorm.mcc.web.AuthServlet</servlet-class>
+                <load-on-startup>2</load-on-startup>
+        </servlet>
+
+        <servlet>
+                <servlet-name>PollingServlet</servlet-name>
+                <servlet-class>org.localstorm.mcc.web.PollingServlet</servlet-class>
+                <load-on-startup>2</load-on-startup>
+        </servlet>
+
+        <servlet>
+                <servlet-name>CallTimingServlet</servlet-name>
+                <servlet-class>org.localstorm.mcc.web.CallTimingServlet</servlet-class>
+                <load-on-startup>2</load-on-startup>
+        </servlet>
+
+        <servlet-mapping>
+                <servlet-name>StripesDispatcher</servlet-name>
+                <url-pattern>/actions/*</url-pattern>
+        </servlet-mapping>
+
+        <servlet-mapping>
+                <servlet-name>AuthServlet</servlet-name>
+                <url-pattern>/auth</url-pattern>
+        </servlet-mapping>
+
+        <servlet-mapping>
+                <servlet-name>PollingServlet</servlet-name>
+                <url-pattern>/poll</url-pattern>
+        </servlet-mapping>
+
+        <servlet-mapping>
+                <servlet-name>TaskContextsStructureChartServlet</servlet-name>
+                <url-pattern>/chart/tasksCtxStructure.png</url-pattern>
+        </servlet-mapping>
+
+        <servlet-mapping>
+                <servlet-name>TasksStructureChartServlet</servlet-name>
+                <url-pattern>/chart/tasksStructure.png</url-pattern>
+        </servlet-mapping>
+
+        <servlet-mapping>
+                <servlet-name>AssetsStructureChartServlet</servlet-name>
+                <url-pattern>/chart/assetsStructure.png</url-pattern>
+        </servlet-mapping>
+
+        <servlet-mapping>
+                <servlet-name>NetWorthHistoryChartServlet</servlet-name>
+                <url-pattern>/chart/netWorthHistory.png</url-pattern>
+        </servlet-mapping>
+
+        <servlet-mapping>
+                <servlet-name>RoiHistoryChartServlet</servlet-name>
+                <url-pattern>/chart/roiHistory.png</url-pattern>
+        </servlet-mapping>
+
+        <servlet-mapping>
+                <servlet-name>DebtHistoryChartServlet</servlet-name>
+                <url-pattern>/chart/debtHistory.png</url-pattern>
+        </servlet-mapping>
+
+        <servlet-mapping>
+                <servlet-name>AssetCostChartServlet</servlet-name>
+                <url-pattern>/chart/assetCost.png</url-pattern>
+        </servlet-mapping>
+
+        <servlet-mapping>
+                <servlet-name>CallTimingServlet</servlet-name>
+                <url-pattern>/timing</url-pattern>
+        </servlet-mapping>
+
+    <session-config>
+        <session-timeout>120</session-timeout>
+    </session-config>
+
+</web-app>

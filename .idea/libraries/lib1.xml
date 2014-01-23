@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jstl-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jcommon-1.0.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/cos.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lucene-core-2.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jfreechart-1.0.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/stripes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

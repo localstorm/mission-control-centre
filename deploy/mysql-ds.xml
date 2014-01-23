@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources>
+	<local-tx-datasource>
+		<jndi-name>MCC_DB</jndi-name>
+		<prepared-statement-cache-size>32</prepared-statement-cache-size>
+		<connection-url>jdbc:mysql://localhost/just_for_fun?useUnicode=true&amp;characterEncoding=UTF-8</connection-url>
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+		<user-name>root</user-name>
+		<password>pass</password>
+		<metadata>
+			<type-mapping>mySQL</type-mapping>
+		</metadata>
+	</local-tx-datasource>
+	<local-tx-datasource>
+		<jndi-name>MCC_DB_UNMANAGED</jndi-name>
+		<prepared-statement-cache-size>32</prepared-statement-cache-size>
+		<connection-url>jdbc:mysql://localhost/just_for_fun?useUnicode=true&amp;characterEncoding=UTF-8</connection-url>
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+		<user-name>root</user-name>
+		<password>pass</password>
+		<metadata>
+			<type-mapping>mySQL</type-mapping>
+		</metadata>
+	</local-tx-datasource>
+</datasources>
