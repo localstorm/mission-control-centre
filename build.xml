@@ -1,0 +1,189 @@
+<project name="GTD-MCC" basedir="." default="dist">
+
+    <property file="deploy.properties"/>
+    <property name="antlib.dir" value="ant-lib"/>
+    <property name="cobertura.dir" value="${antlib.dir}/cobertura"/>
+    <property name="eelib.dir" value="ee-lib"/>
+    <property name="lib.dir" value="lib"/>
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="build"/>
+    <property name="dist.dir" value="dist"/>
+    <property name="tmp.dir" value="tmp"/>
+    <property name="ejbres.dir" value="ejb-res"/>
+    <property name="earres.dir" value="ear-res"/>
+    <property name="res.dir" value="web-res"/>
+    <property name="pname" value="gtdmcc"/>
+    <property name="earlib.dir" value="${earres.dir}/lib"/>
+    <property name="cobertura.enabled" value="${cobertura.output}"/>
+    <property name="coveragereport.dir" value="cobertura-report"/>
+
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties">
+        <classpath>
+            <pathelement location="${antlib.dir}/ant-contrib-0.6.jar"/>
+        </classpath>
+    </taskdef>
+
+    <path id="cobertura.classpath">
+        <fileset dir="${cobertura.dir}">
+            <include name="cobertura.jar"/>
+            <include name="lib/**/*.jar"/>
+        </fileset>
+    </path>
+
+    <taskdef classpathref="cobertura.classpath" resource="tasks.properties"/>
+
+    <path id="compile.classpath">
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
+        <fileset dir="${eelib.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
+        <fileset dir="${earlib.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+    <target name="clean">
+        <delete dir="${dist.dir}"/>
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <target name="prepare">
+        <mkdir dir="build"/>
+        <mkdir dir="dist"/>
+    </target>
+
+    <target name="compile" depends="clean,prepare">
+        <javac srcdir="${src.dir}" destdir="${build.dir}" debug="true">
+            <classpath refid="compile.classpath"/>
+        </javac>
+        <if>
+            <istrue value="${cobertura.enabled}"/>
+            <then>
+                <cobertura-instrument>
+                    <fileset dir="${build.dir}">
+                        <include name="**/*.class"/>
+                    </fileset>
+                </cobertura-instrument>
+            </then>
+        </if>
+    </target>
+
+    <target name="build-xmpp-jar" depends="compile">
+        <mkdir dir="${tmp.dir}"/>
+
+        <copy todir="${tmp.dir}/org/localstorm/mcc/xmpp">
+            <fileset dir="${build.dir}/org/localstorm/mcc/xmpp"/>
+        </copy>
+
+        <jar destfile="${dist.dir}/${pname}-xmpp.jar" basedir="${tmp.dir}"/>
+
+        <delete dir="${tmp.dir}"/>
+    </target>
+
+    <target name="build-ejb-jar" depends="compile">
+        <mkdir dir="${tmp.dir}"/>
+
+        <copy todir="${tmp.dir}/org/localstorm/mcc/ejb">
+            <fileset dir="${build.dir}/org/localstorm/mcc/ejb"/>
+        </copy>
+
+        <copy todir="${tmp.dir}/META-INF">
+            <fileset dir="${ejbres.dir}"/>
+        </copy>
+
+        <jar destfile="${dist.dir}/${pname}-ejb.jar" basedir="${tmp.dir}"/>
+
+        <delete dir="${tmp.dir}"/>
+    </target>
+
+    <target name="build-ejb-client" depends="compile">
+        <mkdir dir="${tmp.dir}"/>
+
+        <copy todir="${tmp.dir}/org/localstorm/mcc/ejb">
+            <fileset dir="${build.dir}/org/localstorm/mcc/ejb" casesensitive="yes">
+                <include name="**/*.class"/>
+                <exclude name="**/impl/*.class"/>
+            </fileset>
+        </copy>
+
+        <jar destfile="${dist.dir}/${pname}-ejb-client.jar" basedir="${tmp.dir}"/>
+
+        <delete dir="${tmp.dir}"/>
+    </target>
+
+    <target name="build-web">
+        <mkdir dir="${tmp.dir}/WEB-INF/classes/org/localstorm/mcc/web"/>
+
+        <copy todir="${tmp.dir}">
+            <fileset dir="${res.dir}"/>
+        </copy>
+
+        <copy todir="${tmp.dir}/WEB-INF/lib">
+            <fileset dir="${lib.dir}"/>
+        </copy>
+
+        <!--copy todir="${tmp.dir}/WEB-INF/lib">
+              <fileset file="${dist.dir}/${pname}-ejb-client.jar"  />
+          </copy-->
+
+        <copy todir="${tmp.dir}/WEB-INF/classes/org/localstorm/mcc/web">
+            <fileset dir="${build.dir}/org/localstorm/mcc/web"/>
+        </copy>
+
+        <jar destfile="${dist.dir}/${pname}.war" basedir="${tmp.dir}"/>
+
+        <delete dir="${tmp.dir}"/>
+    </target>
+
+    <target name="dist" depends="build-xmpp-jar,build-ejb-jar,build-ejb-client,build-web">
+        <mkdir dir="${tmp.dir}"/>
+
+        <copy todir="${tmp.dir}">
+            <fileset file="${dist.dir}/${pname}.war"/>
+            <fileset file="${dist.dir}/${pname}-ejb.jar"/>
+            <fileset file="${dist.dir}/${pname}-xmpp.jar"/>
+        </copy>
+
+        <copy todir="${tmp.dir}">
+            <fileset dir="${earres.dir}"/>
+        </copy>
+
+        <if>
+            <istrue value="${cobertura.enabled}"/>
+            <then>
+                <copy todir="${tmp.dir}/lib">
+                    <fileset dir="${cobertura.dir}/lib"/>
+                    <fileset file="${cobertura.dir}/cobertura.jar"/>
+                </copy>
+            </then>
+        </if>
+
+
+        <jar destfile="${dist.dir}/${pname}.ear" basedir="${tmp.dir}"/>
+
+        <delete dir="${tmp.dir}"/>
+
+        <delete>
+            <fileset file="${dist.dir}/${pname}.war"/>
+            <fileset file="${dist.dir}/${pname}-ejb.jar"/>
+            <fileset file="${dist.dir}/${pname}-xmpp.jar"/>
+        </delete>
+    </target>
+
+    <target name="coverage-report">
+        <cobertura-report format="html" destdir="${coveragereport.dir}">
+            <fileset dir="${src.dir}">
+                <include name="**/*.java"/>
+            </fileset>
+        </cobertura-report>
+    </target>
+
+    <target name="deploy" depends="dist">
+        <copy todir="${deploy.dir}">
+            <fileset file="${dist.dir}/${pname}.ear"/>
+        </copy>
+    </target>
+
+</project>
