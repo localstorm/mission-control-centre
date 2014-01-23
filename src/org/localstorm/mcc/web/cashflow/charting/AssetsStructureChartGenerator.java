@@ -1,9 +1,7 @@
 package org.localstorm.mcc.web.cashflow.charting;
 
 import java.math.BigDecimal;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
@@ -24,6 +22,8 @@ import org.localstorm.mcc.web.cashflow.actions.wrap.WrapUtil;
  * @author localstorm
  */
 public class AssetsStructureChartGenerator {
+
+    public static final String NO_NAME = "N/A";
 
     public static JFreeChart getChart(User user, String title, boolean byAssetClass) {
 
@@ -53,14 +53,13 @@ public class AssetsStructureChartGenerator {
         AssetManager am = ContextLookup.lookup(AssetManager.class, AssetManager.BEAN_NAME);
 
         Collection<Asset> assets = am.getAssets(user);
-
-        assets = WrapUtil.wrapAssets(assets, om);
+        ArrayList<Asset> assetsList = new ArrayList<Asset>(WrapUtil.wrapAssets(assets, om));
 
         DefaultPieDataset result = new DefaultPieDataset();
-        Map<String, BigDecimal> summator = new HashMap<String, BigDecimal>();
+        Map<String, BigDecimal> summator = new LinkedHashMap<String, BigDecimal>();
 
-
-        for (Asset a : assets) {
+        Collections.sort(assetsList, new AssetClassComparator());
+        for (Asset a : assetsList) {
             AssetWrapper aw = (AssetWrapper) a;
 
             if (aw.getValuable().isDebt()){
@@ -89,9 +88,24 @@ public class AssetsStructureChartGenerator {
     }
 
     private static void sum(Map<String, BigDecimal> summator, String name, BigDecimal nwRounded) {
-        name= (name==null) ? "N/A" : name;
+        name= (name==null) ? NO_NAME : name;
         BigDecimal val = summator.get(name);
         val = (val == null) ? BigDecimal.ZERO : val;
         summator.put(name, val.add(nwRounded));
+    }
+
+    private static class AssetClassComparator implements Comparator<Asset> {
+        @Override
+        public int compare(Asset a1, Asset a2) {
+            String ac1 = a1.getAssetClass();
+            String ac2 = a2.getAssetClass();
+            if (ac1 == null || ac1.trim().length()==0) {
+                ac1 = NO_NAME;
+            }
+            if (ac2 == null || ac2.trim().length()==0) {
+                ac2 = NO_NAME;
+            }
+            return ac1.compareTo(ac2);
+        }
     }
 }
