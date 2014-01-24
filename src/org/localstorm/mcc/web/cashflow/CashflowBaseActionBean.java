@@ -27,7 +27,4 @@ public class CashflowBaseActionBean extends BaseActionBean {
         return ContextLookup.lookup(TargetManager.class, TargetManager.BEAN_NAME);
     }
 
-    public PriceTickerManager getPriceTickerManager() {
-        return ContextLookup.lookup(PriceTickerManager.class, PriceTickerManager.BEAN_NAME);
-    }
 }

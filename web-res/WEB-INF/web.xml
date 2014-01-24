@@ -385,6 +385,12 @@
         </servlet>
 
         <servlet>
+            <servlet-name>AssetsLocationChartServlet</servlet-name>
+            <servlet-class>org.localstorm.mcc.web.cashflow.servlets.AssetsLocationChartServlet</servlet-class>
+            <load-on-startup>2</load-on-startup>
+        </servlet>
+
+        <servlet>
                 <servlet-name>NetWorthHistoryChartServlet</servlet-name>
                 <servlet-class>org.localstorm.mcc.web.cashflow.servlets.NetWorthHistoryChartServlet</servlet-class>
                 <load-on-startup>2</load-on-startup>
@@ -454,6 +460,11 @@
         <servlet-mapping>
                 <servlet-name>AssetsStructureChartServlet</servlet-name>
                 <url-pattern>/chart/assetsStructure.png</url-pattern>
+        </servlet-mapping>
+
+        <servlet-mapping>
+            <servlet-name>AssetsLocationChartServlet</servlet-name>
+            <url-pattern>/chart/assetsLocation.png</url-pattern>
         </servlet-mapping>
 
         <servlet-mapping>

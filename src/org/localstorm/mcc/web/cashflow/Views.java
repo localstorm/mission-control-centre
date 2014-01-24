@@ -6,7 +6,7 @@ package org.localstorm.mcc.web.cashflow;
  */
 public class Views 
 {
-    public static final String MARKET_PRICES        = "/jsp/cashflow/marketPrices.jsp";
+    public static final String ASSETS_LOCATION      = "/jsp/cashflow/assetsLocation.jsp";
     public static final String ASSETS               = "/jsp/cashflow/assets.jsp";
     public static final String EDIT_TARGETS         = "/jsp/cashflow/editTargets.jsp";
     public static final String EDIT_ASSETS          = "/jsp/cashflow/editAssets.jsp";
