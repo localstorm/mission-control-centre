@@ -70,18 +70,6 @@
         </if>
     </target>
 
-    <target name="build-xmpp-jar" depends="compile">
-        <mkdir dir="${tmp.dir}"/>
-
-        <copy todir="${tmp.dir}/org/localstorm/mcc/xmpp">
-            <fileset dir="${build.dir}/org/localstorm/mcc/xmpp"/>
-        </copy>
-
-        <jar destfile="${dist.dir}/${pname}-xmpp.jar" basedir="${tmp.dir}"/>
-
-        <delete dir="${tmp.dir}"/>
-    </target>
-
     <target name="build-ejb-jar" depends="compile">
         <mkdir dir="${tmp.dir}"/>
 
@@ -137,13 +125,12 @@
         <delete dir="${tmp.dir}"/>
     </target>
 
-    <target name="dist" depends="build-xmpp-jar,build-ejb-jar,build-ejb-client,build-web">
+    <target name="dist" depends="build-ejb-jar,build-ejb-client,build-web">
         <mkdir dir="${tmp.dir}"/>
 
         <copy todir="${tmp.dir}">
             <fileset file="${dist.dir}/${pname}.war"/>
             <fileset file="${dist.dir}/${pname}-ejb.jar"/>
-            <fileset file="${dist.dir}/${pname}-xmpp.jar"/>
         </copy>
 
         <copy todir="${tmp.dir}">
@@ -168,7 +155,6 @@
         <delete>
             <fileset file="${dist.dir}/${pname}.war"/>
             <fileset file="${dist.dir}/${pname}-ejb.jar"/>
-            <fileset file="${dist.dir}/${pname}-xmpp.jar"/>
         </delete>
     </target>
 

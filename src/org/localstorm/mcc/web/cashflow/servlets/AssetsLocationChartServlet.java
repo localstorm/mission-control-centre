@@ -41,7 +41,7 @@ public class AssetsLocationChartServlet extends HttpServlet
 
         SimpleDateFormat sdf = new SimpleDateFormat(Constants.DATE_FORMAT);
         String curDate = sdf.format(new Date());
-        String title = assetClass+" asset structure by location (" + curDate + ")";
+        String title = assetClass+" asset location (" + curDate + ")";
 
         JFreeChart chart = AssetsLocationChartGenerator.getChart(user, title, assetClass);
 

@@ -35,6 +35,10 @@ public class AssetsLocationViewActionBean extends CashflowBaseActionBean {
         Collection<Asset> assets = this.getAssetManager().getAssets(this.getUser());
         classes = new TreeSet<String>();
         for (Asset a : assets) {
+            if (a.getValuable().isDebt()) {
+                continue;
+            }
+
             String ac = a.getAssetClass();
             if (ac == null || ac.trim().length() == 0) {
                 ac = "Other";

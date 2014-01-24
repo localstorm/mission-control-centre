@@ -3,7 +3,7 @@
 
 <%@ include file="/WEB-INF/jsp/includes/cashflow/hdr.jsp" %>
 
-<h2><span>ASSETS</span> structure</h2>
+<h2><span>ASSETS</span> location</h2>
 
 <div align="center">
     <c:forEach items="${actionBean.classes}" var="clazz" varStatus="loop">

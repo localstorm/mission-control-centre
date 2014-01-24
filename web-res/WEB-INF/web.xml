@@ -3,10 +3,6 @@
 
         <display-name>GTD Personal Task Manager</display-name>
 
-        <listener>
-            <listener-class>org.localstorm.mcc.web.starter.XmppServletContextListener</listener-class>
-        </listener>
-
         <filter>
                 <filter-name>StripesFilter</filter-name>
                 <filter-class>net.sourceforge.stripes.controller.StripesFilter</filter-class>
