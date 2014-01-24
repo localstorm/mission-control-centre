@@ -59,6 +59,8 @@ public class AssetsStructureChartGenerator {
         Map<String, BigDecimal> summator = new LinkedHashMap<String, BigDecimal>();
 
         Collections.sort(assetsList, new AssetClassComparator());
+
+        long total = 0;
         for (Asset a : assetsList) {
             AssetWrapper aw = (AssetWrapper) a;
 
@@ -67,20 +69,22 @@ public class AssetsStructureChartGenerator {
             }
 
             BigDecimal nw = aw.getNetWealth();
-            BigDecimal hundred = new BigDecimal(100);
+            BigDecimal nwRounded = new BigDecimal(nw.longValue());
 
-            BigDecimal nwRounded = nw.multiply(hundred);
-            nwRounded = (new BigDecimal(nwRounded.longValue())).divide(hundred);
             if (!byAssetClass) {
                 sum(summator, aw.getName(), nwRounded);
             } else {
                 sum(summator, aw.getAssetClass(), nwRounded);
             }
+
+            total += nw.longValue();
         }
 
         for (Map.Entry<String, BigDecimal> en : summator.entrySet()) {
-            BigDecimal sum = en.getValue();
-            result.setValue(en.getKey() + " = " + sum.toPlainString(), sum);
+            long sum = en.getValue().longValue();
+            if (sum > 0 && total/sum <= 100) {  // do not show assets representing < 1% of wealth.
+                result.setValue(en.getKey() + " = " + sum, sum);
+            }
         }
 
         return result;

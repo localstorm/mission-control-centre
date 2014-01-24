@@ -85,14 +85,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AssetsStructureChartGenerator.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AssetsStructureChartGenerator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/charting/AssetsStructureChartGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="17" selection-start="2183" selection-end="2183" vertical-scroll-proportion="0.0" vertical-offset="658" max-vertical-offset="1734">
-              <folding>
-                <element signature="e#1912#1919#0" expanded="true" />
-                <element signature="e#2075#2095#0" expanded="true" />
-              </folding>
+            <state line="84" column="98" selection-start="2931" selection-end="2931" vertical-scroll-proportion="0.86935484" vertical-offset="634" max-vertical-offset="1802">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -101,9 +98,7 @@
         <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/charting/AssetsLocationChartGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="19" column="0" selection-start="714" selection-end="714" vertical-scroll-proportion="0.0" vertical-offset="914" max-vertical-offset="2057">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -111,16 +106,16 @@
       <file leaf-file-name="AssetsLocationChartServlet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/servlets/AssetsLocationChartServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="76" selection-start="1507" selection-end="1507" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+            <state line="41" column="76" selection-start="1507" selection-end="1507" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1071">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="0" selection-start="1696" selection-end="1696" vertical-scroll-proportion="0.33225808" vertical-offset="593" max-vertical-offset="3060">
+            <state line="33" column="40" selection-start="1338" selection-end="1338" vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="3060">
               <folding />
             </state>
           </provider>
@@ -129,7 +124,7 @@
       <file leaf-file-name="application.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ear-res/META-INF/application.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+            <state line="15" column="0" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="374">
               <folding />
             </state>
           </provider>
@@ -138,7 +133,7 @@
       <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-res/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8517">
+            <state line="5" column="0" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="8517">
               <folding />
             </state>
           </provider>
@@ -147,11 +142,8 @@
       <file leaf-file-name="AssetsLocationViewActionBean.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/actions/AssetsLocationViewActionBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="12" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-              <folding>
-                <element signature="e#889#890#0" expanded="true" />
-                <element signature="e#919#920#0" expanded="true" />
-              </folding>
+            <state line="38" column="12" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="969">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,7 +151,7 @@
       <file leaf-file-name="assetsLocation.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-res/jsp/cashflow/assetsLocation.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="63" selection-start="184" selection-end="184" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="374">
+            <state line="4" column="63" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="374">
               <folding />
             </state>
           </provider>
@@ -168,7 +160,7 @@
       <file leaf-file-name="CashflowBaseActionBean.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/CashflowBaseActionBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="5" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+            <state line="7" column="5" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="612">
               <folding />
             </state>
           </provider>
@@ -200,7 +192,6 @@
         <option value="$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/servlets/AssetsStructureChartServlet.java" />
         <option value="$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/servlets/NetWorthHistoryChartServlet.java" />
         <option value="$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/servlets/RoiHistoryChartServlet.java" />
-        <option value="$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/charting/AssetsStructureChartGenerator.java" />
         <option value="$PROJECT_DIR$/web-res/jsp/cashflow/marketPrices.jsp" />
         <option value="$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/Views.java" />
         <option value="$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/actions/MarketPricesViewActionBean.java" />
@@ -213,6 +204,7 @@
         <option value="$PROJECT_DIR$/web-res/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/ear-res/META-INF/application.xml" />
+        <option value="$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/charting/AssetsStructureChartGenerator.java" />
       </list>
     </option>
   </component>
@@ -257,10 +249,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope">
-        <subPane subId="Problems" />
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -419,6 +407,10 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Problems" />
+      </pane>
       <pane id="Favorites" />
     </panes>
   </component>
@@ -493,19 +485,6 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="myFilePath" />
@@ -523,6 +502,19 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -593,11 +585,12 @@
       <workItem from="1390374146736" duration="905000" />
       <workItem from="1390464739240" duration="821000" />
       <workItem from="1390548560949" duration="3745000" />
+      <workItem from="1390565479143" duration="526000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5471000" />
+    <option name="totallyTimeSpent" value="5997000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -626,7 +619,6 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30237582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1256656" sideWeight="0.71978986" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="RemoteSynchronizer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -646,6 +638,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30237582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -689,25 +682,26 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web-res/jsp/cashflow/assets.jsp">
+    <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/CashflowBaseActionBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547">
+        <state line="7" column="5" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="612">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-res/jsp/cashflow/assets.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-res/jsp/cashflow/assetsStructure.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-res/jsp/cashflow/debtHistory.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-res/jsp/cashflow/netWorthHistory.jsp">
@@ -727,16 +721,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/Views.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="50" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="459">
-          <folding />
-        </state>
+        <state line="17" column="50" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="459" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/charting/RoiHistoryChartGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="36" selection-start="1016" selection-end="1036" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="2227">
-          <folding />
-        </state>
+        <state line="31" column="36" selection-start="1016" selection-end="1036" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="2227" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/charting/DebtHistoryChartGenerator.java">
@@ -748,9 +738,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/servlets/RoiHistoryChartServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="21" selection-start="720" selection-end="742" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="901">
-          <folding />
-        </state>
+        <state line="20" column="21" selection-start="720" selection-end="742" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="901" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-res/WEB-INF/web.xml">
@@ -774,9 +762,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/charting/NetWorthHistoryChartGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="34" selection-start="4523" selection-end="4523" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
+        <state line="133" column="34" selection-start="4523" selection-end="4523" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-res/jsp/cashflow/netWorthHistory.jsp">
@@ -786,9 +772,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/charting/RoiHistoryChartGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="36" selection-start="1016" selection-end="1036" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
+        <state line="31" column="36" selection-start="1016" selection-end="1036" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/charting/DebtHistoryChartGenerator.java">
@@ -822,79 +806,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/servlets/DebtHistoryChartServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="78" selection-start="1456" selection-end="1456" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <folding />
-        </state>
+        <state line="38" column="78" selection-start="1456" selection-end="1456" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/servlets/NetWorthHistoryChartServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="78" selection-start="2015" selection-end="2015" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="935">
-          <folding />
-        </state>
+        <state line="53" column="78" selection-start="2015" selection-end="2015" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="935" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/servlets/RoiHistoryChartServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="78" selection-start="1457" selection-end="1457" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <folding />
-        </state>
+        <state line="38" column="78" selection-start="1457" selection-end="1457" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-res/jsp/cashflow/roiHistory.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="38" selection-start="1697" selection-end="1697" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="714">
-          <folding />
-        </state>
+        <state line="31" column="38" selection-start="1697" selection-end="1697" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="714" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-res/jsp/cashflow/viewAsset.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="2193" max-vertical-offset="3196">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="2193" max-vertical-offset="3196" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-res/jsp/cashflow/assetCosts.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="879">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="879" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-res/jsp/cashflow/assets.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-res/jsp/cashflow/debtHistory.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="879">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="879" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ear-res/META-INF/gtd-dash-rpt1.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2567">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2567" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ear-res/META-INF/gtd-dash-rpt2.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="2941">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="2941" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/Views.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="37" selection-start="134" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
+        <state line="8" column="37" selection-start="134" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/ejb/cashflow/AssetManager.java">
@@ -920,9 +882,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-res/jsp/cashflow/assetsStructure.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="59" selection-start="390" selection-end="390" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="442">
-          <folding />
-        </state>
+        <state line="11" column="59" selection-start="390" selection-end="390" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="442" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/servlets/AssetsStructureChartServlet.java">
@@ -963,43 +923,26 @@
     <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/actions/AssetsLocationViewActionBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="12" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-          <folding>
-            <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#919#920#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-res/jsp/cashflow/assetsLocation.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="63" selection-start="184" selection-end="184" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="374">
+        <state line="4" column="63" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="374">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-res/WEB-INF/jsp/includes/cashflow/rightpan.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="98" selection-start="1056" selection-end="1056" vertical-scroll-proportion="-7.6538463" vertical-offset="175" max-vertical-offset="816">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/charting/AssetsStructureChartGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="17" selection-start="2183" selection-end="2183" vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="1734">
-          <folding>
-            <element signature="e#1912#1919#0" expanded="true" />
-            <element signature="e#2075#2095#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="22" column="98" selection-start="1056" selection-end="1056" vertical-scroll-proportion="-7.6538463" vertical-offset="175" max-vertical-offset="816" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/charting/AssetsLocationChartGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="0" selection-start="714" selection-end="714" vertical-scroll-proportion="0.0" vertical-offset="251" max-vertical-offset="2057">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1026,7 +969,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1696" selection-end="1696" vertical-scroll-proportion="0.33225808" vertical-offset="593" max-vertical-offset="3060">
+        <state line="33" column="40" selection-start="1338" selection-end="1338" vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="3060">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/localstorm/mcc/web/cashflow/charting/AssetsStructureChartGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="98" selection-start="2931" selection-end="2931" vertical-scroll-proportion="0.86935484" vertical-offset="634" max-vertical-offset="1802">
           <folding />
         </state>
       </provider>
