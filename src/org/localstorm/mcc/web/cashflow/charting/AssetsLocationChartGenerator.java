@@ -84,7 +84,6 @@ public class AssetsLocationChartGenerator {
         }
 
         return result;
-
     }
 
     private static String normalize(String clazz) {
